@@ -8,7 +8,7 @@ const ShowRecipe = () => {
         <div className="recipe-details">
 
             <img
-                src={`http://localhost:5000/images/${recipe.coverImage}`}
+                src={`${import.meta.env.VITE_API_URL}/images/${recipe.coverImage}`}
                 alt={recipe.title}
                 className="recipe-image"
             />

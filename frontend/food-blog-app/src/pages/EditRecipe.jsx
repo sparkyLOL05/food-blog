@@ -14,7 +14,7 @@ export default function EditRecipe() {
     const {id}=useParams()
     useEffect(()=>{
         const getData=async()=>{
-            let resp=await axios.get(`http://localhost:5000/recipe/${id}`)
+            let resp=await axios.get(`${import.meta.env.VITE_API_URL}/recipe/${id}`)
             let res=resp.data
             setRecipeData({
                 title:res.title,
@@ -47,7 +47,7 @@ export default function EditRecipe() {
 
         try {
             const res = await axios.put(
-            `http://localhost:5000/recipe/${id}`,
+            `${import.meta.env.VITE_API_URL}/recipe/${id}`,
             formData,
             {
                 headers: {
