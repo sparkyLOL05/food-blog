@@ -5,13 +5,7 @@ const cors=require("cors")
 const PORT=process.env.PORT || 3000
 const connectDb=require("./config/connectionDB")
 connectDb()
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://food-blog-bni7prwxk-sparky-lol-007.vercel.app"
-  ],
-  credentials: true
-}))
+app.use(cors())
 app.use(express.static("public"))
 app.use(express.json())
 app.use("/",require("./routes/user"))
