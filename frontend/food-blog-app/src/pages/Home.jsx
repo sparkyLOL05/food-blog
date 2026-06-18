@@ -33,7 +33,7 @@ const Home = () => {
   Explore recipes from home cooks around the world, save your
   favorites, and share your own creations with our growing food
   community. Whether it's a quick snack or a family feast,
-  you'll find something delicious here.</h3>
+  you'll find something delicious here.</h3><br />
     <button onClick={addRecipe}>Share your recipe</button>
             </div>
             
