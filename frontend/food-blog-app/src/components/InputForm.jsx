@@ -13,7 +13,7 @@ export default function InputForm({setIsOpen}) {
         try {
             let endpoint = isSignUp ? "signUp" : "login";
 
-            const res = await axios.post(`http://localhost:5000/${endpoint}`, {
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/${endpoint}`, {
             email,
             password
             });

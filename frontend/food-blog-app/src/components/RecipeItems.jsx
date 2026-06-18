@@ -23,7 +23,7 @@ const RecipeItems = () => {
     console.log(allRecipies)
 
     const onDelete=async(id)=>{
-        await axios.delete(`http://localhost:5000/recipe/${id}`)
+        await axios.delete(`${import.meta.env.VITE_API_URL}/recipe/${id}`)
         let filterItem=favItems.filter(recipe=>recipe._id!==id)
         localStorage.setItem("fav",JSON.stringify(filterItem))
         navigate("/myRecipe");
@@ -41,7 +41,7 @@ const RecipeItems = () => {
         {allRecipies?.map((item,index)=>{
             return(
                 <div key={index} className='card'>
-                    <NavLink to={`/recipe/${item._id}`}><img src={`http://localhost:5000/images/${item.coverImage}`}  height="100px" width="120px" /></NavLink>
+                    <NavLink to={`/recipe/${item._id}`}><img src={`${import.meta.env.VITE_API_URL}/images/${item.coverImage}`}  height="100px" width="120px" /></NavLink>
                     <div className="card-body">
                         <div className="title">{item.title}</div>
                         <div className="icons">

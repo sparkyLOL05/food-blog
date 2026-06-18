@@ -11,7 +11,7 @@ import ShowRecipe from './pages/ShowRecipe'
 
 const getAllRecipies=async()=>{
     let allRecipies=[]
-    const res=await axios.get('http://localhost:5000/recipe/')
+    const res=await axios.get(`${import.meta.env.VITE_API_URL}/recipe/`)
     allRecipies=res.data 
     return allRecipies
 }
@@ -26,7 +26,7 @@ const getFavRecipes=()=>{
 }
 
 const getRecipeById=async({params})=>{
-  const res=await axios.get(`http://localhost:5000/recipe/${params.id}`)
+  const res=await axios.get(`${import.meta.env.VITE_API_URL}/recipe/${params.id}`)
   let recipe=res.data;
   return recipe
 
