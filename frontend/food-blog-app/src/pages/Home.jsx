@@ -34,8 +34,9 @@ const Home = () => {
   favorites, and share your own creations with our growing food
   community. Whether it's a quick snack or a family feast,
   you'll find something delicious here.</h3>
+    <button onClick={addRecipe}>Share your recipe</button>
             </div>
-            <button onClick={addRecipe}>Share your recipe</button>
+            
             <div className="right">
                 <img src={x} alt="alttext" width="320px" height="300px  " />
             </div>
